@@ -1,7 +1,6 @@
 import logging
 import http.client
 import config
-import urllib.urlencode
 import json
 from .observer import Observer
 
