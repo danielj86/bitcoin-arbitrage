@@ -16,8 +16,4 @@ class HttpPoster(Observer):
         data = response.read().decode()
         logging.warn("[HTTP Observer] - posted data to %s" % config.posterhost)
         logging.warn(data)
-        conn.close()			
-        
-
-		
-		
+        conn.close()	
