@@ -9,7 +9,7 @@ class Logger(Observer):
                     weighted_buyprice, weighted_sellprice):
         params = {'profit': profit, 'volume': volume, 'buyprice' : buyprice, 'kask' : kask, 'sellprice' : sellprice, 'kbid' : kbid, 'perc' : perc  }
         json_dump = json.dumps(params)
-        headers = {"Content-type": "application/x-www-form-urlencoded","Accept": "text/plain"}
+        headers = {"Content-type": "application/json","Accept": "application/json"}
         conn = http.client.HTTPConnection(config.posterhost)
         conn.request("POST", config.posterurl, json_dump, headers)
         response = conn.getresponse()
