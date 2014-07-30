@@ -1,5 +1,5 @@
 import logging
-import urllib
+import urllib.parse
 import http.client
 import config
 from .observer import Observer
