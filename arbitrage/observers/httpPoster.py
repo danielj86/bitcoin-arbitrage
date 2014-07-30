@@ -4,7 +4,7 @@ import config
 import json
 from .observer import Observer
 
-class httpPoster(Observer):
+class HttpPoster(Observer):
     def opportunity(self, profit, volume, buyprice, kask, sellprice, kbid, perc,
                     weighted_buyprice, weighted_sellprice):
         params = {'profit': profit, 'volume': volume, 'buyprice' : buyprice, 'kask' : kask, 'sellprice' : sellprice, 'kbid' : kbid, 'perc' : perc, 'weighted_buyprice' : weighted_buyprice, 'weighted_sellprice' : weighted_sellprice  }
