@@ -11,7 +11,7 @@ class Logger(Observer):
         json_dump = json.dumps(params)
         headers = {"Content-type": "application/x-www-form-urlencoded","Accept": "text/plain"}
         conn = http.client.HTTPConnection(config.posterhost)
-        conn.request("POST", "/", json_dump, headers)
+        conn.request("POST", config.posterurl, json_dump, headers)
         response = conn.getresponse()
         data = response.read().decode()
         logging.warn("data")
