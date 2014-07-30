@@ -1,7 +1,7 @@
 import logging
 import http.client
 import config
-from urllib import urlencode
+import urllib.urlencode
 from .observer import Observer
 
 
